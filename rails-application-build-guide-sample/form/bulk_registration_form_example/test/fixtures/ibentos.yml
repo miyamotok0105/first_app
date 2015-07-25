@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ibento: MyString
+  kaisaibi: 2015-07-24
+  kaisaijikan: 2015-07-24 22:35:36
+  price: 1
+  basho: MyString
+
+two:
+  ibento: MyString
+  kaisaibi: 2015-07-24
+  kaisaijikan: 2015-07-24 22:35:36
+  price: 1
+  basho: MyString

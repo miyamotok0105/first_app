@@ -1,0 +1,32 @@
+<% content_for(:title) do %>
+  イベント検索
+<% end %>
+
+<%= search_form_for(@q, url: search_ibento_path, html: { method: :get, class: 'form-horizontal', role: 'form' }) do |f| %>
+  <%= render 'search_form', f: f %>
+<% end %>
+
+<%= render layout: 'shared/search_result_box' do %>
+  <table class="table table-list ">
+  <thead>
+    <tr>
+      <th>イベント名</th>
+      <th>イベント日</th>
+      <th>イベント開始時間</th>
+      <th>値段</th>
+      <th>場所</th>
+    </tr>
+  </thead>
+  <% @ibento.each do |ibento| %>
+  <tbody>
+  <tr>
+    <td><%= ibento.ibento %> </td>
+    <td><%= ibento.kaisaibi %></td>
+    <td><%= ibento.kaisaijikan %></td>
+    <td><%= ibento.price %></td>
+    <td><%= ibento.basho %></td>
+  </tr>
+  </tbody>
+<% end %>
+</table>
+<% end %>

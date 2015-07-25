@@ -1,0 +1,16 @@
+<% if form.products2.any? { |product2| product2.errors.present? } %>
+  <div class="alert alert-danger">
+    <% form.products2.each.with_index(1) do |product2, idx| %>
+      <% if product2.errors.present? %>
+      <ul>
+      <li><%= "#{idx}行目の商品レコードが不正です。" %></li>
+      <ul>
+        <% product2.errors.full_messages.each do |error| %>
+          <li><%= error %></li>
+        <% end %>
+      </ul>
+      </ul>
+      <% end %>
+    <% end %>
+  </div>
+<% end %>
